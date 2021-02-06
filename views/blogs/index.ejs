@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../template/head.ejs') %>
+  <body>
+    <%- include('../template/nav.ejs') %>
+
+    <div class="blogs content">
+      <h2>All Blogs</h2>
+
+      <% if(blogs.length > 0) { %> <% blogs.forEach(blog => { %>
+      <a href="/blogs/<%= blog._id %>" class="single">
+        <h3 class="title"><%= blog.title %></h3>
+        <p class="snippet"><%= blog.snippet %></p>
+      </a>
+
+      <% }) %> <% } else { %>
+      <h3 class="kosong">Kosong cuy..</h3>
+      <a class="create-new" href="/blogs/create">Buat blog baru!</a>
+      <% } %>
+    </div>
+    <%- include('../template/footer.ejs') %>
+  </body>
+</html>
