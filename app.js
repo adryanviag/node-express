@@ -9,7 +9,7 @@ const app = express();
 
 // ! connect to mongoDB
 const dbURI =
-  "mongodb+srv://adryanviag:kacang123@learn-node.e4fxe.mongodb.net/learn-node?retryWrites=true&w=majority";
+  "mongodb+srv://<dbuname>:<dbpass>@learn-node.e4fxe.mongodb.net/learn-node?retryWrites=true&w=majority";
 mongoose
   .connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then((res) => {
